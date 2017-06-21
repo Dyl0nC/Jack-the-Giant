@@ -28,9 +28,9 @@ class Player: SKSpriteNode {
     func movePlayer(moveLeft: Bool) {
         
         if moveLeft {
-            self.position.x = self.position.x - 12
+            self.position.x -= 12
         } else {
-            self.position.x = self.position.x + 12
+            self.position.x += 12
         }
         
     }

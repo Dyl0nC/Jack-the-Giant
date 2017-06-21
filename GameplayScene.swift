@@ -10,6 +10,12 @@ import SpriteKit
 
 class GameplayScene: SKScene {
     
+    var mainCamera: SKCameraNode?
+    
+    var bg1: Background?
+    var bg2: Background?
+    var bg3: Background?
+    
     var player: Player?
     
     var canMove = false
@@ -18,14 +24,13 @@ class GameplayScene: SKScene {
     var center: CGFloat?
     
     override func didMove(to view: SKView) {
-        center = (self.scene?.size.width)! / (self.scene?.size.height)!
-        
-        player = self.childNode(withName: "Player") as? Player!
-        player?.initPlayerAndAnimations()
+        initVariables()
     }
     
     override func update(_ currentTime: TimeInterval) {
+        moveCamera()
         managePlayer()
+        manageBackgrounds()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -49,9 +54,36 @@ class GameplayScene: SKScene {
         player?.stopPlayerAnimation()
     }
     
+    func initVariables() {
+        center = (self.scene?.size.width)! / (self.scene?.size.height)!
+        
+        player = self.childNode(withName: "Player") as? Player!
+        player?.initPlayerAndAnimations()
+        
+        mainCamera = self.childNode(withName: "Main Camera") as? SKCameraNode!
+        
+        getBackgrounds()
+    }
+    
+    func getBackgrounds() {
+        bg1 = self.childNode(withName: "BG1") as? Background!
+        bg2 = self.childNode(withName: "BG2") as? Background!
+        bg3 = self.childNode(withName: "BG3") as? Background!
+    }
+    
     func managePlayer() {
         if canMove {
             player?.movePlayer(moveLeft: moveLeft)
         }
+    }
+    
+    func moveCamera() {
+        self.mainCamera?.position.y -= 12
+    }
+    
+    func manageBackgrounds() {
+        bg1?.moveBG(camera: mainCamera!)
+        bg2?.moveBG(camera: mainCamera!)
+        bg3?.moveBG(camera: mainCamera!)
     }
 }

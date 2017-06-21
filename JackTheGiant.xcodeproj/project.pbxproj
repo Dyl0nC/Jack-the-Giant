@@ -62,6 +62,7 @@
 		F8A40FED1EF73BFC00A16FD1 /* Player 6.png in Resources */ = {isa = PBXBuildFile; fileRef = F8A40FE51EF73BFC00A16FD1 /* Player 6.png */; };
 		F8A40FEE1EF73BFC00A16FD1 /* Player 7.png in Resources */ = {isa = PBXBuildFile; fileRef = F8A40FE61EF73BFC00A16FD1 /* Player 7.png */; };
 		F8A40FEF1EF73BFC00A16FD1 /* Player 8.png in Resources */ = {isa = PBXBuildFile; fileRef = F8A40FE71EF73BFC00A16FD1 /* Player 8.png */; };
+		F8C33A911EFADC4D00CBFB6D /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C33A901EFADC4D00CBFB6D /* Background.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,7 @@
 		F8A40FE51EF73BFC00A16FD1 /* Player 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Player 6.png"; path = "8 - Buttons/Player 6.png"; sourceTree = "<group>"; };
 		F8A40FE61EF73BFC00A16FD1 /* Player 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Player 7.png"; path = "8 - Buttons/Player 7.png"; sourceTree = "<group>"; };
 		F8A40FE71EF73BFC00A16FD1 /* Player 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Player 8.png"; path = "8 - Buttons/Player 8.png"; sourceTree = "<group>"; };
+		F8C33A901EFADC4D00CBFB6D /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,6 +362,7 @@
 		F8A40FC41EF7246400A16FD1 /* Game Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F8C33A8F1EFADC2C00CBFB6D /* Background Class */,
 				F8A40FCA1EF72FED00A16FD1 /* Player Classes */,
 				F8A40FC51EF7248100A16FD1 /* Scene Classes */,
 			);
@@ -395,6 +398,14 @@
 				F8A40FE71EF73BFC00A16FD1 /* Player 8.png */,
 			);
 			name = "3 - Player";
+			sourceTree = "<group>";
+		};
+		F8C33A8F1EFADC2C00CBFB6D /* Background Class */ = {
+			isa = PBXGroup;
+			children = (
+				F8C33A901EFADC4D00CBFB6D /* Background.swift */,
+			);
+			name = "Background Class";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -584,6 +595,7 @@
 				F8A40F491EF700F000A16FD1 /* GameViewController.swift in Sources */,
 				F8A40FCC1EF7300400A16FD1 /* Player.swift in Sources */,
 				F8A40F411EF700F000A16FD1 /* AppDelegate.swift in Sources */,
+				F8C33A911EFADC4D00CBFB6D /* Background.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -832,6 +844,7 @@
 				F8A40F6D1EF700F000A16FD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8A40F6E1EF700F000A16FD1 /* Build configuration list for PBXNativeTarget "JackTheGiantTests" */ = {
 			isa = XCConfigurationList;
@@ -840,6 +853,7 @@
 				F8A40F701EF700F000A16FD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8A40F711EF700F000A16FD1 /* Build configuration list for PBXNativeTarget "JackTheGiantUITests" */ = {
 			isa = XCConfigurationList;
@@ -848,6 +862,7 @@
 				F8A40F731EF700F000A16FD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
