@@ -10,6 +10,8 @@ import SpriteKit
 
 class GameplayScene: SKScene {
     
+    var cloudsController = CloudsController()
+    
     var mainCamera: SKCameraNode?
     
     var bg1: Background?
@@ -22,6 +24,10 @@ class GameplayScene: SKScene {
     var moveLeft = false
     
     var center: CGFloat?
+    
+    let distanceBetClouds = CGFloat(450)
+    let minX = CGFloat(-237)
+    let maxX = CGFloat(237)
     
     override func didMove(to view: SKView) {
         initVariables()
@@ -56,6 +62,7 @@ class GameplayScene: SKScene {
     
     func initVariables() {
         center = (self.scene?.size.width)! / (self.scene?.size.height)!
+        print("\(center)")
         
         player = self.childNode(withName: "Player") as? Player!
         player?.initPlayerAndAnimations()
@@ -63,6 +70,7 @@ class GameplayScene: SKScene {
         mainCamera = self.childNode(withName: "Main Camera") as? SKCameraNode!
         
         getBackgrounds()
+        cloudsController.arrangeCloudsInScene(scene: self.scene!, distanceBetweenClouds: distanceBetClouds, center: center!, minX: minX, maxX: maxX, initialClouds: true)
     }
     
     func getBackgrounds() {
@@ -78,7 +86,7 @@ class GameplayScene: SKScene {
     }
     
     func moveCamera() {
-        self.mainCamera?.position.y -= 12
+        self.mainCamera?.position.y -= 4
     }
     
     func manageBackgrounds() {

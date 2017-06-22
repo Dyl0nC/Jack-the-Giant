@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F801677B1EFC26DE000CEB8A /* CloudsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F801677A1EFC26DE000CEB8A /* CloudsController.swift */; };
 		F8A40F411EF700F000A16FD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A40F401EF700F000A16FD1 /* AppDelegate.swift */; };
 		F8A40F431EF700F000A16FD1 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F8A40F421EF700F000A16FD1 /* GameScene.sks */; };
 		F8A40F451EF700F000A16FD1 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = F8A40F441EF700F000A16FD1 /* Actions.sks */; };
@@ -83,6 +84,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F801677A1EFC26DE000CEB8A /* CloudsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudsController.swift; sourceTree = "<group>"; };
 		F8A40F3D1EF700F000A16FD1 /* JackTheGiant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JackTheGiant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A40F401EF700F000A16FD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8A40F421EF700F000A16FD1 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -172,6 +174,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F80167791EFC26C0000CEB8A /* Clouds Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F801677A1EFC26DE000CEB8A /* CloudsController.swift */,
+			);
+			name = "Clouds Classes";
+			sourceTree = "<group>";
+		};
 		F8A40F341EF700F000A16FD1 = {
 			isa = PBXGroup;
 			children = (
@@ -362,6 +372,7 @@
 		F8A40FC41EF7246400A16FD1 /* Game Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F80167791EFC26C0000CEB8A /* Clouds Classes */,
 				F8C33A8F1EFADC2C00CBFB6D /* Background Class */,
 				F8A40FCA1EF72FED00A16FD1 /* Player Classes */,
 				F8A40FC51EF7248100A16FD1 /* Scene Classes */,
@@ -591,6 +602,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8A40FC71EF724C500A16FD1 /* GameplayScene.swift in Sources */,
+				F801677B1EFC26DE000CEB8A /* CloudsController.swift in Sources */,
 				F8A40F471EF700F000A16FD1 /* GameScene.swift in Sources */,
 				F8A40F491EF700F000A16FD1 /* GameViewController.swift in Sources */,
 				F8A40FCC1EF7300400A16FD1 /* Player.swift in Sources */,
