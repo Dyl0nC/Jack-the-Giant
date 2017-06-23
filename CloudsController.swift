@@ -33,7 +33,7 @@ class CloudsController {
     func createClouds() -> [SKSpriteNode] {
         var cloudsArray = [SKSpriteNode]()
         
-        for i in 0..<2 {
+        for _ in 0..<2 {
             let cloud1 = SKSpriteNode(imageNamed: "Cloud 1")
             cloud1.name = "1"
             let cloud2 = SKSpriteNode(imageNamed: "Cloud 2")
@@ -47,6 +47,30 @@ class CloudsController {
             cloud2.setScale(1.5)
             cloud3.setScale(1.5)
             darkCloud.setScale(1.5)
+            
+            cloud1.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: cloud1.size.width - 15, height: cloud1.size.height - 10))
+            cloud1.physicsBody?.affectedByGravity = false
+            cloud1.physicsBody?.restitution = 0
+            cloud1.physicsBody?.categoryBitMask = ColliderType.Cloud
+            cloud1.physicsBody?.collisionBitMask = ColliderType.Player
+            
+            cloud2.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: cloud2.size.width - 15, height: cloud2.size.height - 10))
+            cloud2.physicsBody?.affectedByGravity = false
+            cloud2.physicsBody?.restitution = 0
+            cloud2.physicsBody?.categoryBitMask = ColliderType.Cloud
+            cloud2.physicsBody?.collisionBitMask = ColliderType.Player
+            
+            cloud3.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: cloud3.size.width - 15, height: cloud3.size.height - 10))
+            cloud3.physicsBody?.affectedByGravity = false
+            cloud3.physicsBody?.restitution = 0
+            cloud3.physicsBody?.categoryBitMask = ColliderType.Cloud
+            cloud3.physicsBody?.collisionBitMask = ColliderType.Player
+            
+            darkCloud.physicsBody = SKPhysicsBody(rectangleOf: darkCloud.size)
+            darkCloud.physicsBody?.affectedByGravity = false
+            darkCloud.physicsBody?.categoryBitMask = ColliderType.DarkCloudAndCollectables
+            darkCloud.physicsBody?.collisionBitMask = ColliderType.Player
+            
             
             cloudsArray.append(cloud1)
             cloudsArray.append(cloud2)
